@@ -1,0 +1,1661 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAzUABAAAAAAFNgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABbAAAABwAAAAcZMzaOEdERUYAAAGIAAAAHQAAACAAOQAET1MvMgAAAagAAAA+AAAAYHqhde9jbWFwAAAB6AAAAFIAAAFa4azkLWN2dCAAAAI8AAAAKAAAACgFgwioZnBnbQAAAmQAAAGxAAACZVO0L6dnYXNwAAAEGAAAAAgAAAAIAAAAEGdseWYAAAQgAAAFDgAACMz7eroHaGVhZAAACTAAAAAwAAAANgWEOEloaGVhAAAJYAAAAB0AAAAkDGEGa2htdHgAAAmAAAAAEwAAADBEgAAQbG9jYQAACZQAAAAaAAAAGgsICJBtYXhwAAAJsAAAACAAAAAgASgBD25hbWUAAAnQAAACZwAABOD4no+3cG9zdAAADDgAAABsAAAAmF+yXM9wcmVwAAAMpAAAAC4AAAAusPIrFAAAAAEAAAAAyYlvMQAAAADLVHQgAAAAAM/u9uZ4nGNgZGBg4ANiCQYQYGJgBEJuIGYB8xgABMMAPgAAAHicY2Bm42OcwMDKwMLSw2LMwMDQBqGZihmiwHycoKCyqJjB4YPDh4NsDP+BfNb3DIuAFCOSEgUGRgAKDgt4AAB4nGNgYGBmgGAZBkYGEAgB8hjBfBYGCyDNxcDBwMTA9MHhQ9SHrA8H//9nYACyQyFs/sP86/kX8HtB9UIBIxsDXICRCUgwMaACRoZhDwA3fxKSAAAAAAHyAHABJQB/AIEAdAFGAOsBIwC/ALgAxACGAGYAugBNACcA/wCIeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAAAABAAH//wAPeJyFlctvG1UUh+/12DPN1B7P3JnYjj2Ox4/MuDHxJH5N3UdaEUQLqBIkfQQioJWQ6AMEQkIqsPGCPwA1otuWSmTBhjtps2ADWbJg3EpIXbGouqSbCraJw7kzNo2dRN1cnXN1ZvT7zuuiMEI7ncizyA0URofRBJpCdbQuIFShYY+GZRrxMDVtih5TwQPHtXDFFSIKoWIbuREBjLH27Ny4MsbVx+uOJThavebgVrNRLAiYx06rXsvhxLgWx9xpfHdrs/ekc2Pl2cpPCVEITQpwbj8VQhfXSq2m+Wxqaq2D73Kne5e3NjHqQNj3CRYlJlgUl/jRNP+2Gs2pNYRQiOnmUaQDqm30KqKiTTWPWjboxnTWpvgxjXo0KrtZXAHt7hwIz0YVcj88JnKlJKi3NPAwLyDwZudSmJSMMJFDYaOkaol6XtESx3Gt1VTytdZJ3DCLeaVhVnCBH1fycHTxFXwPX+l2e3d6H/TufGGmMTLTnbSJUdo00zuBswMO/nl3YLeL/wnu9/limCuD3vC54h5NBVz6Li414AI8Vx3iiosKcQXUbrvhFFiYb++HN4DaF4XzFW0fIN4XDWJ3a3XQoq9V8WiyRmdsatV9xUcHims1JloH0YUa090G3Tro3mC6c01f+YwCPquINr1PTaCP6rVTOOmf0GE2dBc7zWIhji3/5MchSuBHgDbU99RMWt3YUNMZMJmx92YP6NsHx/5/M1yvInpnkIOM3Z8fA3JQ2lW1RFC1KaBPDFXNAHYYvGy73aYZZZ3HifbeuiVZCpwA3oQBs0wGPYJbJfg60xrKEbKiNtTe1adwrpBRwlAuQ3q3VRaX0QmQ9a49BTSCuF1MLfQ6+tinOubRBZuWPNoMevGMT+V41KitO1is3D/tpMcq1JHZqDHGs8DoYGDkxJgKjHROeTCmhZvzPm9pod+ltKm4PN7Dyvvldlpsg8D+4AUJZ3F/JBstZz7cbFRxsaAGV6yX/dkcycWf8eS3QlQea+YLjdm3yrOnrhFpUyKVvFE4lpv4bO3Svx/6F/4xmiDu/RT5iI++lko18mY1oX+5UGKR6kmVjM/Zb76yfHtxy+h/SyQ0lLdpdKy/lWB6szatetQJ8nZ80A2Qt6ift6gJeavU3BO4gtxs/KCtNPVibCtYCWY3SIlSBPKXZALXiIR9oZeJ1AuMyxLpHIy/yO7vSiSE+kZvk0ihJ30HgHfzZtEMmvV58x6dtqns0XTAW7Vdm4HJ04OCp/crOO7rd9SGxQAE/mVA9xRN+kVSMRFF6S9JFGUtthkjBA5tFCWc2l4V43Ex9GmUP3SI37Jjmir9KqlaDJ4S4JB3vuM/jzyH1+8MuoZ+QGzfnvPoJb96cZlWjMcKLfgDwB7E634JTY+asjsPzS5CiVnEWY+KsrsIN5rn3mAPjqmQBxGjcGKB9f9ZxY3mYC2L85CJ2FXIxKKyHk+dg0FHbuEc7D5NzWUX32WxFcWNGRAbvwSx0RmIXVDuYySafluQBmzA/ssqJAMLnli+WIC90Gw4lm85wcp0qjArEDPJJV/sSx4P9ungTpgMw5gVC1XO4uULq0s3v1rqLi0vX/z65vlH50f8T/RHmSPTk5xxWBWOluMT6WiOy+tdvWxlV/XQb3o3c6Ssr+r6I708GsX9/nzp1tKFh0s3v7m4vAy/Hnb/KMOvc1wump6Il48K6mGDy02X9Yd65pa+nQIjk76lWxCkG8NBCP0HQS9IpAAAeJxjYGRgYGBhcCrq214Qz2/zlUGenQEEzr/77oug/zewFbB+AHI5GJhAogBwKQ0qeJxjYGRgYH3/P46BgZ0BBNgKGBgZUAEPAE/7At0AAAB4nGNngAB2IGYjhBsYBAAIYADVAAAAAAAAAAAAAFwAyAEeAaACCgKmAx4DggRmAAAAAQAAAAwAagAEAAAAAAACAAEAAgAWAAABAAChAAAAAHiclZI7bxQxFIWPd/JkUYQChEhIyAVKgdBMskm1QkKrRETpQiLRUczueB/K7HhlOxttg8LvoKPgP9DxFxANDR0tHRWi4NjrPIBEgh1p/dm+vufcawNYFWsQmP6e4jSyQB2fI9cwj++RE9wTjyPP4LYoI89iWbyLPIe6+Bh5Hs9rryMv4GbtW+RF3EhuRa7jbrIbeQkPkjdUETOLnL0Kip4FVvAhco1RXyMnSPEz8gzWxE7kWTwUp5HnsCLeR57HW/El8gJWa58iL+JO7UfkOh4l9yMv4UnyEtvQGGECgwF66MNBooF1bGCL1ELB/TYU+ZBRlvsKQ44Se6jQ4a7hef+fh72Crv25kp+8lNWGmeKoOI5jJLb1aGIGvb6TjfWNLdkqdFvJw4l1amjlXtXRZqRN7lSRylZZyhBqpVFWmTEXgWfUrpi/hZOQXdOd4rKuXOtEWT3k5IArPRzTUU5tHKjecZkTpnVbNOnt6jzN8240GD4xtikvZW56043rPMg/dS+dlOceXoR+WPbJ55Dsekq1lJpnypsMUsYOdCW30o103Ytu/lvh+5RWFLfBjm9/N8hJntPhvx92rnoE/kyHdGasGy754kw36vsVf/lFeBi+0COu+cfgQr42G3CRpeLoZ53gmfe3X6rcKt5oVxnptHR9JS8ehVUd5wvvahN2uqxOOpMXapibI5k7Zwbt4xBSaTfoKBufhAnO/uqNcfK8OTs0OQ6l7JIqFjDhYj5WcjevCnI/1DDiI8j4ndWb/5YzDZWh79yomWXeXj7Nnw70/2TIeFPTrlSh89k1ObOSRVZWZfgF0r/zJQB4nG2JUQuCQBCEd07TTg36fb2IyBaLd3vWaUh/vmSJnvpgmG8YcmS8X3Shf3R7QA4OBUocUKHGER5NNbOOEvwc1txnuWkTRb/aPjimJ5vXabI+3VfOiyS15UWvyezM2xiGOPyuMohOH8O8JiO4Af+FsAGNAEuwCFBYsQEBjlmxRgYrWCGwEFlLsBRSWCGwgFkdsAYrXFhZsBQrAAA=) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>workshop</title></head><body><article class="markdown-body"><p><img alt="DevSecCon" src="images/devseccon-header.png" /></p>
+<h3 id="i-am-madhu"><a name="user-content-i-am-madhu" href="#i-am-madhu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>I am Madhu</h3>
+<ul>
+<li>Security Automation Ninja at <a href="http://appsecco.com">Appsecco</a></li>
+<li>I work on Security, DevOps and Cloud platforms</li>
+<li>I have been speaker &amp; trainer at Defcon, All Day DevOps, DevSecCon</li>
+<li>Reported security bugs to Google, Microsoft, Yahoo</li>
+<li>My twitter is <a href="https://twitter.com/@madhuakula">@madhuakula</a></li>
+</ul>
+<h3 id="about-my-company-appsecco"><a name="user-content-about-my-company-appsecco" href="#about-my-company-appsecco" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>About my company - Appsecco</h3>
+<p>Work with companies to test existing software they have for security issues and give them the information they need to fix any problems we find</p>
+<p>Ensure that companies can recover from security incidents they suffer and work with them to stop them from reoccurring</p>
+<p>Guide companies to design, specify, develop and purchase software that is secure</p>
+<p>Note: We are an application security company. Providing security solutions, so that you can focus on your business.</p>
+<h3 id="what-will-you-learn-today"><a name="user-content-what-will-you-learn-today" href="#what-will-you-learn-today" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What will you learn today?</h3>
+<ol>
+<li>Monitoring your infrastructure by aggregating and analysing logs</li>
+<li>How to centralise logging using the Elastic stack in near real-time</li>
+<li>Creating dashboards for attack patterns monitoring</li>
+<li>Working with dashboards for reporting and how to reuse them</li>
+<li>Using Serverless(AWS Lambda) for automated defence</li>
+</ol>
+<h3 id="this-workshop-does-not-cover"><a name="user-content-this-workshop-does-not-cover" href="#this-workshop-does-not-cover" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>This workshop does not cover</h3>
+<ol>
+<li>Performance tuning and optimisation for clusters</li>
+<li>Multi cluster configurations</li>
+<li>Custom plug-ins and scripts for Logstash</li>
+</ol>
+<p>Note: I am not an expert in all the three topics mentioned above.</p>
+<h3 id="quick-overview"><a name="user-content-quick-overview" href="#quick-overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quick Overview</h3>
+<p><em>What I call trailer before the movie!</em> :)</p>
+<p><img alt="My setup" src="images/over-1.png" /></p>
+<p>Note: In one screen I will show you Elastic stack, infrastructure and attacker</p>
+<p><img alt="AWS ACL dashboard" src="images/over-2.png" /></p>
+<p>Note: SSH service is allowed from any source IP address. </p>
+<p><img alt="Attacking infrastructure using Hydra" src="images/over-3.png" /></p>
+<p>Note: <br />
+1. Hydra is an open source brute forcing tool<br />
+2. Attacker will use Hydra to brute force our SSH service</p>
+<p><img alt="Kibana dashboard" src="images/over-4.png" /></p>
+<p>Note: Kibana is a visual dashboard to show the log data<br />
+Near real-time</p>
+<p><img alt="Alerting with Elastalert" src="images/over-5.png" /></p>
+<p>Note: <br />
+1. Elastalert is an open source alerting tool for Elasticsearch<br />
+2. Blocking and alerting attacks using Elastalert</p>
+<p><img alt="Getting alerts in Slack" src="images/over-6.png" /></p>
+<p>Note: Slack is a chat ops tool (Similar to IRC)<br />
+Slack message for alerts from Elastalert</p>
+<p><img alt="Automatically a new inbound rule created" src="images/over-7.png" /></p>
+<p>Note: Automatically a new inbound rule created<br />
+1. AWS Lambda is a compute service, which is Serverless<br />
+2. AWS labs, released a free and open source Serverless framework called Chalice<br />
+3. With my basic Python Flask skills, I was able to use Chalice to edit the network ACL<br />
+4. Have you heard of Python Flask? (Flask is a micro web framework written in Python)</p>
+<p><img alt="Security event monitoring dashboard" src="images/over-8.png" /></p>
+<p>Note: <br />
+1. Centralised place for security event monitoring dashboard</p>
+<p><img alt="Applying dashboard filters" src="images/over-11.png" /></p>
+<p>Note: Applying filters to the data in Kibana dashboard</p>
+<h3 id="modern-logging-solution"><a name="user-content-modern-logging-solution" href="#modern-logging-solution" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Modern Logging Solution</h3>
+<ul>
+<li>Elastic stack is made up of</li>
+<li>Elasticsearch</li>
+<li>Logstash</li>
+<li>Kibana</li>
+<li>Beats</li>
+</ul>
+<h2 id="elk-overview"><a name="user-content-elk-overview" href="#elk-overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ELK overview</h2>
+<blockquote>
+<p><img alt="Elastic Stack Architecture" src="images/elk_overall.png" /><br />
+<small>Ref: <a href="https://www.elastic.co/products">https://www.elastic.co/products</a></small></p>
+</blockquote>
+<p>Note: <br />
+1. Collect is equal to Beats<br />
+2. Enrich is equal to Logstash<br />
+3. Search is equal to Elasticsearch<br />
+4. Visualize is equal to Kibana</p>
+<h3 id="prerequisites"><a name="user-content-prerequisites" href="#prerequisites" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Prerequisites</h3>
+<ol>
+<li>Familiarity with Linux command line</li>
+<li>VirtualBox installed or administrator privileges to install it</li>
+<li>Minimum 6 GB free disk space</li>
+<li>Minimum 4 GB RAM</li>
+<li>Enthusiasm to learn cool stuff :)</li>
+</ol>
+<h2 id="instructions"><a name="user-content-instructions" href="#instructions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Instructions</h2>
+<ol>
+<li>Please follow the commands and the overall flow as given in the slides</li>
+<li>Please direct all questions/queries to instructors or volunteers</li>
+</ol>
+<h3 id="workshop-architecture"><a name="user-content-workshop-architecture" href="#workshop-architecture" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Workshop architecture</h3>
+<p><img alt="Architecture" src="images/ourstructure.png" /></p>
+<h3 id="import-the-virtual-machine-appliance"><a name="user-content-import-the-virtual-machine-appliance" href="#import-the-virtual-machine-appliance" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Import the virtual machine appliance</h3>
+<p>Please import the virtual machine appliance from</p>
+<p><code>devsecon-asia-2017/Virtual-Machines/aismd.ova</code></p>
+<p><img alt="Import appliance" src="images/setup/vbox_import_ova.png" /></p>
+<p><img alt="Select OVA file location" src="images/setup/import-vm-1.png" /></p>
+<p><img alt="Select reinitialize network interfaces" src="images/setup/import-vm-2.png" /></p>
+<p><img alt="Start import" src="images/setup/import-vm-3.png" /></p>
+<h3 id="start-the-virtual-machine-and-login"><a name="user-content-start-the-virtual-machine-and-login" href="#start-the-virtual-machine-and-login" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Start the virtual machine and login</h3>
+<p><strong>username :: password</strong></p>
+<p>monitor::monitor</p>
+<h3 id="please-note"><a name="user-content-please-note" href="#please-note" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Please note</h3>
+<!--  .slide: data-background="yellow" -->
+
+<ul>
+<li>In this entire documentation. Please change the IP address as you have got<ul>
+<li><code>192.168.56.101</code> is the <code>monitor</code> VM</li>
+</ul>
+</li>
+</ul>
+<h3 id="ssh-into-the-monitor-vm"><a name="user-content-ssh-into-the-monitor-vm" href="#ssh-into-the-monitor-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SSH into the monitor VM</h3>
+<p>switch to <code>root</code> user by entering the below command</p>
+<pre><code>ssh -l monitor 192.168.56.101
+sudo -i
+</code></pre>
+
+<h3 id="configure-elasticsearch-cluster"><a name="user-content-configure-elasticsearch-cluster" href="#configure-elasticsearch-cluster" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configure Elasticsearch Cluster</h3>
+<ul>
+<li>Replace the below content using your choice of text editor.</li>
+</ul>
+<p><code>vi /etc/elasticsearch/elasticsearch.yml</code></p>
+<pre><code>cluster.name: ninja-infra-mon
+
+node.name: node-1
+
+bootstrap.memory_lock: true
+
+network.host: 127.0.0.1
+
+path.repo: &quot;/var/backups/elasticsearch&quot;
+
+</code></pre>
+
+<p>Note: make sure check the spaces before editing in the file</p>
+<ul>
+<li>Start Elasticsearch service by running</li>
+</ul>
+<pre><code>service elasticsearch restart
+</code></pre>
+
+<ul>
+<li>Check whether Elasticsearch is running or not</li>
+</ul>
+<pre><code>curl -XGET 'http://localhost:9200'
+</code></pre>
+
+<p><img alt="Elasticsearch CURL" src="images/elastic-search-curl.bmp" /></p>
+<p>Note: It will take 3 to 5 seconds to start elasticsearch</p>
+<h3 id="setting-up-nginx-reverse-proxy-for-elasticsearch-and-kibana"><a name="user-content-setting-up-nginx-reverse-proxy-for-elasticsearch-and-kibana" href="#setting-up-nginx-reverse-proxy-for-elasticsearch-and-kibana" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting up nginx reverse-proxy for elasticsearch and kibana</h3>
+<ul>
+<li>Generate the basic authentication password by running <code>htpasswd</code></li>
+</ul>
+<pre><code>htpasswd -c /etc/nginx/htpasswd.users elkadmin
+</code></pre>
+
+<pre><code>Password : DevSecCon@123
+Confirm Password : DevSecCon@123
+</code></pre>
+
+<p><img alt="htpasswd generation" src="images/htpasswd-gen.bmp" /></p>
+<ul>
+<li>Replace the nginx default configuration by editing</li>
+</ul>
+<p><code>vi /etc/nginx/sites-available/default</code></p>
+<pre><code>server {
+    listen 80; #for Kibana
+
+    server_name localhost;
+
+    auth_basic &quot;Restricted Access&quot;;
+    auth_basic_user_file /etc/nginx/htpasswd.users;
+
+    location / {
+        proxy_pass http://localhost:5601;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+server {
+    listen 8080; #for Elasticsearch
+
+    server_name localhost;
+
+    auth_basic &quot;Restricted Access&quot;;
+    auth_basic_user_file /etc/nginx/htpasswd.users;
+
+    location / {
+        proxy_pass http://localhost:9200;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+</code></pre>
+
+<ul>
+<li>Restart the <code>nginx</code> service to apply the changes</li>
+</ul>
+<pre><code>service nginx restart
+</code></pre>
+
+<h3 id="elasticsearch-plug-ins-overview"><a name="user-content-elasticsearch-plug-ins-overview" href="#elasticsearch-plug-ins-overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elasticsearch plug-ins overview</h3>
+<p>Plug-ins already installed in the system</p>
+<p>Navigate to <a href="http://192.168.56.101:8080/_plugin/head">http://192.168.56.101:8080/_plugin/head</a></p>
+<ul>
+<li>Use the username <code>elkadmin</code> and password <code>DevSecCon@123</code></li>
+</ul>
+<p><img alt="ES basic auth" src="images/es-basic-auth.bmp" /></p>
+<p>Note: Elasticsearch basic authentication login from nginx reverse-proxy</p>
+<p><img alt="ES head plug-in" src="images/elasticsearch-head-plugin.png" /></p>
+<p>Note: Please use your monitor VM IP</p>
+<p><img alt="ES Head Plug-in" src="images/es-head-plugin-1.png" /></p>
+<ul>
+<li><font color="green"><code>green</code></font> - All primary and replica shards are active.</li>
+<li><font color="yellow"><code>yellow</code></font> - All primary shards are active, but not all replica shards are active.</li>
+<li><font color="red"><code>red</code></font> - Not all primary shards are active.</li>
+</ul>
+<p><img alt="ES Head plug-in" src="images/es-head-plugin2.png" /></p>
+<h3 id="lets-configure-logstash"><a name="user-content-lets-configure-logstash" href="#lets-configure-logstash" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Let&rsquo;s configure Logstash</h3>
+<p><img alt="Logstash Overview" src="images/logstash.png" /></p>
+<h3 id="basic-logstash-configuration"><a name="user-content-basic-logstash-configuration" href="#basic-logstash-configuration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Basic Logstash configuration</h3>
+<pre><code>input {
+    stdin {}
+    file {}
+    ...
+}
+
+filter {
+    grok {}
+    date {}
+    geoip {}
+    ...
+}
+
+output {
+   elasticsearch {}
+   email {}
+   ...
+}
+</code></pre>
+
+<h3 id="example-grok"><a name="user-content-example-grok" href="#example-grok" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example grok</h3>
+<div align="left">For the following log event:</div>
+
+<pre><code>55.3.244.1 GET /index.html 15824 0.043
+</code></pre>
+
+<div align="left">This would be the matching grok:</div>
+
+<pre><code>%{IP:client} %{WORD:method} %{URIPATHPARAM:request} %{NUMBER:bytes} %{NUMBER:duration}
+</code></pre>
+
+<p>Note: <br />
+1. The syntax for a grok pattern is <code>%{SYNTAX:SEMANTIC}</code><br />
+2. <code>SYNTAX</code> is the name of the pattern that will match your text. For example: <code>1337</code> will be matched by the <code>NUMBER</code> pattern, <code>192.168.123.12</code> will be matched by the <code>IP</code> pattern.<br />
+3. <code>SEMANTIC</code> is the identifier you give to the piece of text being matched. E.g. <code>1337</code> could be the count and <code>192.168.123.12</code> could be a client making a request</p>
+<h3 id="consider-the-following-apache-log-event"><a name="user-content-consider-the-following-apache-log-event" href="#consider-the-following-apache-log-event" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Consider the following Apache Log Event</h3>
+<pre><code>123.249.19.22 - - [01/Feb/2015:14:12:13 +0000] &quot;GET /manager/html HTTP/1.1&quot; 404 448 &quot;-&quot; &quot;Mozilla/3.0 (compatible; Indy Library)
+</code></pre>
+
+<p>Using a regular expression!!</p>
+<p><img alt="Apache RegEx" src="images/apacheregex.png" /></p>
+<p>Using Grok filter patterns :)</p>
+<pre><code>%{IPV4} %{USER:ident} %{USER:auth} \[%{HTTPDATE:timestamp}\] &quot;(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:httpversion})?)&quot; %{NUMBER:response} (?:%{NUMBER:bytes}|-)
+</code></pre>
+
+<p>Things can get even more simpler using an <em>inbuilt</em> grok :) :)</p>
+<pre><code>%{COMBINEDAPACHELOG}
+</code></pre>
+
+<h3 id="available-logstash-grok-patterns"><a name="user-content-available-logstash-grok-patterns" href="#available-logstash-grok-patterns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Available Logstash Grok Patterns</h3>
+<ul>
+<li><a href="https://grokdebug.herokuapp.com/patterns"><a href="https://grokdebug.herokuapp.com/patterns"><a href="https://grokdebug.herokuapp.com/patterns">https://grokdebug.herokuapp.com/patterns</a></a></a></li>
+<li><a href="http://grokconstructor.appspot.com/"><a href="http://grokconstructor.appspot.com/"><a href="http://grokconstructor.appspot.com/">http://grokconstructor.appspot.com/</a></a></a></li>
+<li><a href="https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns"><a href="https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns"><a href="https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns">https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns</a></a></a></li>
+<li><a href="https://github.com/clay584/logstash_configs"><a href="https://github.com/clay584/logstash_configs"><a href="https://github.com/clay584/logstash_configs">https://github.com/clay584/logstash_configs</a></a></a></li>
+</ul>
+<h3 id="create-a-logstash-configuration-to-receive-filebeat-logs-from-infra-vm"><a name="user-content-create-a-logstash-configuration-to-receive-filebeat-logs-from-infra-vm" href="#create-a-logstash-configuration-to-receive-filebeat-logs-from-infra-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create a logstash configuration to receive filebeat logs from infra VM</h3>
+<ul>
+<li>Create the input file to receive logs from filebeat</li>
+</ul>
+<p><code>vi /etc/logstash/conf.d/02-beats.conf</code> in the <code>monitor</code> machine</p>
+<pre><code>input {
+  beats {
+    port =&gt; 5044
+    ssl =&gt; true
+    ssl_certificate =&gt; &quot;/etc/pki/tls/certs/logstash-forwarder.crt&quot;
+    ssl_key =&gt; &quot;/etc/pki/tls/private/logstash-forwarder.key&quot;
+  }
+}
+</code></pre>
+
+<ul>
+<li>Create the ssh logs filter file</li>
+</ul>
+<p><code>vi /etc/logstash/conf.d/10-ssh-log.conf</code></p>
+<pre><code>filter {
+ if [type] == &quot;sshlog&quot; {
+  grok {
+
+    match =&gt; [
+      &quot;message&quot;, &quot;%{SYSLOGTIMESTAMP:syslog_date} %{SYSLOGHOST:syslog_host} %{DATA:syslog_program}(?:\[%{POSINT}\])?: %{WORD:login} password for %{USERNAME:username} from %{IP:ip} %{GREEDYDATA}&quot;,
+      &quot;message&quot;, &quot;%{SYSLOGTIMESTAMP:syslog_date} %{SYSLOGHOST:syslog_host} %{DATA:syslog_program}(?:\[%{POSINT}\])?: message repeated 2 times: \[ %{WORD:login} password for %{USERNAME:username} from %{IP:ip} %{GREEDYDATA}&quot;,
+      &quot;message&quot;, &quot;%{SYSLOGTIMESTAMP:syslog_date} %{SYSLOGHOST:syslog_host} %{DATA:syslog_program}(?:\[%{POSINT}\])?: %{WORD:login} password for invalid user %{USERNAME:username} from %{IP:ip} %{GREEDYDATA}&quot;,
+      &quot;message&quot;, &quot;%{SYSLOGTIMESTAMP:syslog_date} %{SYSLOGHOST:syslog_host} %{DATA:syslog_program}(?:\[%{POSINT}\])?: %{WORD:login} %{WORD:auth_method} for %{USERNAME:username} from %{IP:ip} %{GREEDYDATA}&quot;
+    ]
+  }
+
+  date {
+    match =&gt; [ &quot;timestamp&quot;, &quot;dd/MMM/YYYY:HH:mm:ss Z&quot; ]
+    locale =&gt; en
+  }
+
+  geoip {
+    source =&gt; &quot;ip&quot;
+  }
+ }
+}
+</code></pre>
+
+<ul>
+<li>Create the web logs filter file</li>
+</ul>
+<p><code>vi /etc/logstash/conf.d/11-web-log.conf</code></p>
+<pre><code>filter {
+ if [type] == &quot;weblog&quot; {
+  grok {
+    match =&gt; {
+      &quot;message&quot; =&gt; '%{IPORHOST:clientip} %{USER:ident} %{USER:auth} \[%{HTTPDATE:timestamp}\] &quot;%{WORD:verb} %{DATA:request} HTTP/%{NUMBER:httpversion}&quot; %{NUMBER:response:int} (?:-|%{NUMBER:bytes:int}) %{QS:referrer} %{QS:agent}'
+    }
+  }
+
+  date {
+    match =&gt; [ &quot;timestamp&quot;, &quot;dd/MMM/YYYY:HH:mm:ss Z&quot; ]
+    locale =&gt; en
+  }
+
+  geoip {
+    source =&gt; &quot;clientip&quot;
+  }
+
+  useragent {
+    source =&gt; &quot;agent&quot;
+    target =&gt; &quot;useragent&quot;
+  }
+ }
+}
+</code></pre>
+
+<ul>
+<li>Create the output elasticsearch file</li>
+</ul>
+<p><code>vi /etc/logstash/conf.d/20-elastic-output.conf</code></p>
+<pre><code>output {
+  elasticsearch {
+    hosts =&gt; [&quot;localhost:9200&quot;]
+    manage_template =&gt; false
+    index =&gt; &quot;infra-%{+YYYY.MM.dd}&quot;
+  }
+}
+</code></pre>
+
+<h3 id="start-the-logstash-service"><a name="user-content-start-the-logstash-service" href="#start-the-logstash-service" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Start the Logstash service</h3>
+<pre><code>service logstash restart
+</code></pre>
+
+<h3 id="start-the-kibana-service"><a name="user-content-start-the-kibana-service" href="#start-the-kibana-service" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Start the kibana service</h3>
+<ul>
+<li>Kibana is configured out of the box by default<br />
+<pre><code>service kibana restart
+</code></pre></li>
+</ul>
+<h3 id="lets-start-the-infra-machine"><a name="user-content-lets-start-the-infra-machine" href="#lets-start-the-infra-machine" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Let&rsquo;s start the infra machine</h3>
+<ul>
+<li>Infra machine can start by running the below command</li>
+</ul>
+<pre><code>docker run -d -p 8000:8000 --name infrasetup infra
+</code></pre>
+
+<p>Note: docker is container platform (it packages software into containers)</p>
+<h3 id="accessing-infrastructure-service"><a name="user-content-accessing-infrastructure-service" href="#accessing-infrastructure-service" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing Infrastructure Service</h3>
+<ul>
+<li>Navigate to the below URL to access the web application (Replace the below IP with your virtual machine IP)</li>
+</ul>
+<pre><code>http://192.168.56.101:8000
+</code></pre>
+
+<ul>
+<li>Browse to multiple links (Don&rsquo;t visit exploit links for now)</li>
+</ul>
+<h3 id="check-the-logs-index-in-elasticsearch-head-plugin"><a name="user-content-check-the-logs-index-in-elasticsearch-head-plugin" href="#check-the-logs-index-in-elasticsearch-head-plugin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Check the logs index in Elasticsearch Head plugin</h3>
+<ul>
+<li>Navigate to the below URL to see that logs coming from infrastructure</li>
+</ul>
+<pre><code>http://192.168.56.101:8080/_plugin/head
+</code></pre>
+
+<p><img alt="Updated logs in head plugin infra index" src="images/new/es-head-infra.png" /></p>
+<h3 id="opening-index-in-kibana"><a name="user-content-opening-index-in-kibana" href="#opening-index-in-kibana" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Opening Index in Kibana</h3>
+<ul>
+<li>Use the username <code>elkadmin</code> and password <code>DevSecCon@123</code></li>
+</ul>
+<p><img alt="Kibana Index" src="images/kibana-auth.bmp" /></p>
+<p><strong>Index Selection</strong></p>
+<p><img alt="Kibana Settings" src="images/k-1.png" /></p>
+<ul>
+<li>Index for our workshop is <code>infra-*</code></li>
+</ul>
+<p>Note: Default kibana login screen</p>
+<p><strong>Discovery</strong></p>
+<p><img alt="Kibana discovery" src="images/k-3.png" /></p>
+<p>Note: Kibana discovery for searching events</p>
+<p><strong>Mapped log in JSON format</strong></p>
+<p><img alt="JSON formatted document in Kibana" src="images/k-4.png" /></p>
+<p><strong>Visualize</strong></p>
+<p><img alt="Visualisations in Kibana" src="images/k-5.png" /></p>
+<ul>
+<li>Choose a new visualization to create charts, graphs, etc.</li>
+</ul>
+<p><strong>Selecting the search source</strong></p>
+<p><img alt="Selecting the search source for visualizations" src="images/k-6.png" /></p>
+<ul>
+<li>We can select the search source to create visualization. It can be saved search or new search</li>
+</ul>
+<p><strong>Creating a pie chart</strong></p>
+<p><img alt="Creating pie chart in Kibana" src="images/k-7.png" /></p>
+<p>Note:<br />
+- Now we can select the aggregation, for example <code>count</code> and we can also give custom label to display<br />
+- Then create buckets splitting slices. select the field which you want to create a pie chart and select the size of the field to display.<br />
+- Once selection is done, Click on the play button to apply the changes</p>
+<p><strong>Dashboard</strong></p>
+<p><img alt="Creating dashboards in Kibana" src="images/k-9.png" /></p>
+<ul>
+<li>Dashboards and visualizations can be imported and exported in JSON format</li>
+</ul>
+<p><strong>Status</strong></p>
+<p><img alt="Elastic stack status in Kibana" src="images/k-10.png" /></p>
+<p><strong>Import/Export</strong></p>
+<p><img alt="Dashboards, Visualisations Import and Export" src="images/k-11.png" /></p>
+<h3 id="generate-the-web-attack-traffic-by-running-nikto-scan"><a name="user-content-generate-the-web-attack-traffic-by-running-nikto-scan" href="#generate-the-web-attack-traffic-by-running-nikto-scan" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Generate the WEB attack traffic by running Nikto scan</h3>
+<ul>
+<li>In the host machine run the below command</li>
+</ul>
+<pre><code>Windows: nikto.bat -host http://192.168.56.101:8000
+Linux/Mac: perl nikto.pl -host http://192.168.56.101:8000
+</code></pre>
+
+<p>Note:<br />
+1. Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items.</p>
+<h3 id="check-kibana-search-queries-for-404-errors"><a name="user-content-check-kibana-search-queries-for-404-errors" href="#check-kibana-search-queries-for-404-errors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Check Kibana search queries for 404 errors</h3>
+<ul>
+<li>Look for <code>404</code> errors in weblogs</li>
+</ul>
+<p><img alt="Kibana search queries for 404 errors" src="images/new/kibana-404-search.png" /></p>
+<h3 id="what-is-alerting-for-elk-stack"><a name="user-content-what-is-alerting-for-elk-stack" href="#what-is-alerting-for-elk-stack" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is alerting for ELK stack?</h3>
+<blockquote>
+<p>We can set up a notification system to let users/admins know that a pattern match has occurred.</p>
+</blockquote>
+<h3 id="how-is-this-achieved"><a name="user-content-how-is-this-achieved" href="#how-is-this-achieved" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How is this achieved?</h3>
+<ul>
+<li>Logstash output plugin alerting via (Email, Pager duty, JIRA, etc.)</li>
+<li>Elasticsearch commercial product - Watcher</li>
+<li>An open source alerting for elasticsearch by Yelp called <code>elastalert</code></li>
+</ul>
+<h3 id="introducing-elastalert"><a name="user-content-introducing-elastalert" href="#introducing-elastalert" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introducing elastalert</h3>
+<p>An opensource project by Yelp for alerting on Elasticsearch</p>
+<blockquote>
+<p>ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.</p>
+</blockquote>
+<h3 id="creating-alerting-for-the-attacks"><a name="user-content-creating-alerting-for-the-attacks" href="#creating-alerting-for-the-attacks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating alerting for the attacks</h3>
+<ul>
+<li>The elastalert is installed in <code>/opt/elastalert</code></li>
+<li>Run the below commands to create elastalert index</li>
+</ul>
+<pre><code>elastalert-create-index
+</code></pre>
+
+<p><img alt="elastalert creation" src="images/elastalert-creation.bmp" /></p>
+<p>Note: Give the localhost and port and remaining defaults</p>
+<h3 id="creating-rules-for-attacks"><a name="user-content-creating-rules-for-attacks" href="#creating-rules-for-attacks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating rules for attacks</h3>
+<h3 id="web-404-error-logs-attack-rule"><a name="user-content-web-404-error-logs-attack-rule" href="#web-404-error-logs-attack-rule" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Web 404 error logs attack rule</h3>
+<p><code>vi /opt/elastalert/web-404-error-slack.yml</code></p>
+<pre><code>es_host: localhost
+es_port: 9200
+name: &quot;web 404 error log alert&quot;
+type: frequency
+index: infra-*
+num_events: 20
+timeframe:
+  hours: 24
+
+# For more info: http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html
+
+filter:
+- query:
+    query_string:
+      query: &quot;_type: weblog AND 404&quot;
+
+alert:
+  - slack
+  - email
+
+slack:
+slack_webhook_url: &quot;https://hooks.slack.com/services/xxxxx&quot;
+
+email:
+  - &quot;root&quot;
+
+realert:
+  minutes: 0
+</code></pre>
+
+<p>Note: Replace the Slack webhook</p>
+<h3 id="configuring-the-elastalert"><a name="user-content-configuring-the-elastalert" href="#configuring-the-elastalert" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuring the elastalert</h3>
+<ul>
+<li>Replace the configuration file content</li>
+</ul>
+<p><code>vi /opt/elastalert/config.yaml</code></p>
+<pre><code>rules_folder: example_rules
+run_every:
+  minutes: 1
+buffer_time:
+  minutes: 15
+es_host: localhost
+es_port: 9200
+writeback_index: elastalert_status
+alert_time_limit:
+  days: 2
+</code></pre>
+
+<h3 id="running-alerting-on-indices"><a name="user-content-running-alerting-on-indices" href="#running-alerting-on-indices" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running alerting on indices</h3>
+<pre><code>elastalert --verbose --config /opt/elastalert/config.yaml --start 2017-02-20 --rule /opt/elastalert/web-404-error-slack.yml
+</code></pre>
+
+<p>Note: config file and the start date and alerting rule. We can run this as a cron job in production (or) background process</p>
+<h3 id="check-the-slack-channel"><a name="user-content-check-the-slack-channel" href="#check-the-slack-channel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Check the slack channel</h3>
+<p><img alt="Slack Alert" src="images/slack-alert.bmp" /></p>
+<h3 id="check-email-as-well-base64-encoded"><a name="user-content-check-email-as-well-base64-encoded" href="#check-email-as-well-base64-encoded" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Check Email as well (Base64 Encoded)</h3>
+<p><img alt="Email Alert" src="images/email-alert.bmp" /></p>
+<h3 id="backing-up-elasticsearch"><a name="user-content-backing-up-elasticsearch" href="#backing-up-elasticsearch" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Backing up Elasticsearch</h3>
+<h3 id="what-is-curator"><a name="user-content-what-is-curator" href="#what-is-curator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is Curator ?</h3>
+<blockquote>
+<p>Elasticsearch Curator helps you curate or manage your indices.<br />
+Supports a variety of actions from delete a snapshot to shard allocation routing.</p>
+</blockquote>
+<ul>
+<li>Run the below command in monitor VM to setup the backups path</li>
+</ul>
+<pre><code>curl -XPUT 'http://localhost:9200/_snapshot/backup' -d '{
+&quot;type&quot;: &quot;fs&quot;,
+&quot;settings&quot;: {
+&quot;location&quot;: &quot;/var/backups/elasticsearch/&quot;,
+&quot;compress&quot;: true
+}
+}'
+</code></pre>
+
+<h3 id="to-snapshot-an-index-called-elastalert_status-into-a-repository-backup"><a name="user-content-to-snapshot-an-index-called-elastalert_status-into-a-repository-backup" href="#to-snapshot-an-index-called-elastalert_status-into-a-repository-backup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>To snapshot an index called <code>elastalert_status</code> into a repository <code>backup</code></h3>
+<pre><code>curator snapshot --name=elastalert_logs_snapshot --repository backup indices --prefix elastalert_status
+</code></pre>
+
+<h3 id="to-see-all-snapshots-in-the-backup-repository"><a name="user-content-to-see-all-snapshots-in-the-backup-repository" href="#to-see-all-snapshots-in-the-backup-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>To see all snapshots in the <code>backup</code> repository</h3>
+<pre><code>curator show snapshots --repository backup
+</code></pre>
+
+<h3 id="to-restore-a-snapshot-from-curator"><a name="user-content-to-restore-a-snapshot-from-curator" href="#to-restore-a-snapshot-from-curator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>To restore a snapshot from curator</h3>
+<pre><code>curl -XPOST 'http://localhost:9200/_snapshot/backup/elastalert_logs_snapshot/_restore'
+</code></pre>
+
+<h3 id="restore-sample-logs-to-create-some-advanced-dashboards"><a name="user-content-restore-sample-logs-to-create-some-advanced-dashboards" href="#restore-sample-logs-to-create-some-advanced-dashboards" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Restore sample logs to create some advanced dashboards</h3>
+<pre><code>tar -xvf /srv/filebeat.tar.gz -C /var/backups/elasticsearch/
+
+curator show snapshots --repository backup
+
+curl -XPOST 'http://localhost:9200/_snapshot/backup/filebeat_logs_snapshot/_restore'
+</code></pre>
+
+<p>Note: We already have sample old logs, Restore them for creating advanced dashboards</p>
+<h3 id="look-at-head-plug-in-to-see-the-restored-sample-logs"><a name="user-content-look-at-head-plug-in-to-see-the-restored-sample-logs" href="#look-at-head-plug-in-to-see-the-restored-sample-logs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Look at head plug-in to see the restored sample logs</h3>
+<ul>
+<li>Navigate to <a href="http://192.168.56.101:8080/_plugin/head">http://192.168.56.101:8080/_plugin/head</a></li>
+</ul>
+<p><img alt="Filebeat sample logs" src="images/filebeat-sample-logs.bmp" /></p>
+<h2 id="dashboards-for-attack-patterns"><a name="user-content-dashboards-for-attack-patterns" href="#dashboards-for-attack-patterns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dashboards for Attack Patterns</h2>
+<p>Note: We have already imported logs to Elasticsearch using curator. <br /><br />
+Now create some advanced dashboards for attack patterns using Kibana</p>
+<p><img alt="Create index" src="images/k-1.png" /></p>
+<p>Note: we are creating new index for old filebeat logs</p>
+<ul>
+<li>Select the JSON file in your USB drive <code>/dashboards/all-kibana.json</code></li>
+</ul>
+<p><img alt="Kibana index import" src="images/kibana-import-2.bmp" /></p>
+<h3 id="pre-created-dashboards"><a name="user-content-pre-created-dashboards" href="#pre-created-dashboards" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pre-created dashboards</h3>
+<ul>
+<li>Access the pre-created dashboards using</li>
+</ul>
+<p><img alt="dashboards location" src="images/kibana-dashboards.bmp" /></p>
+<h3 id="web-attack-dashboard"><a name="user-content-web-attack-dashboard" href="#web-attack-dashboard" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Web Attack Dashboard</h3>
+<p><img alt="Web Attack Dashboard" src="images/kibana-web-dashboard.bmp" /></p>
+<h3 id="ssh-attack-dashboard"><a name="user-content-ssh-attack-dashboard" href="#ssh-attack-dashboard" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SSH Attack Dashboard</h3>
+<p><img alt="SSH Attack Dashboard" src="images/kibana-ssh-dashboard.bmp" /></p>
+<h3 id="combined-attack-dashboard"><a name="user-content-combined-attack-dashboard" href="#combined-attack-dashboard" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Combined Attack Dashboard</h3>
+<p><img alt="Attack Dashboard" src="images/kibana-attack-dashboard.bmp" /></p>
+<h3 id="defence-elk-aws-lambda-demo"><a name="user-content-defence-elk-aws-lambda-demo" href="#defence-elk-aws-lambda-demo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Defence (ELK + AWS Lambda) - DEMO</h3>
+<iframe frameborder=0 width=95% height=586 marginheight=0 marginwidth=0 scrolling=no src="https://youtube.com/embed/3_HIlDm3GtM?autoplay=0&controls=0&showinfo=0&autohide=1"></iframe>
+
+<h3 id="aws-lambda-chalice-code"><a name="user-content-aws-lambda-chalice-code" href="#aws-lambda-chalice-code" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>AWS Lambda - Chalice Code</h3>
+<p><img alt="AWS Lambda chalice code" src="images/code.png" /></p>
+<p><a href="https://github.com/appsecco/alldaydevops-aism"><a href="https://github.com/appsecco/alldaydevops-aism"><a href="https://github.com/appsecco/alldaydevops-aism">https://github.com/appsecco/alldaydevops-aism</a></a></a></p>
+<p>Note: boto is an SDK for AWS written in Python</p>
+<h3 id="security-for-our-aws-lambda-service"><a name="user-content-security-for-our-aws-lambda-service" href="#security-for-our-aws-lambda-service" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security for our AWS Lambda service</h3>
+<p>We are primarily doing the following two things</p>
+<ol>
+<li>A <em>sufficiently random token</em> to protect the request when we post the IP address from ElastAlert</li>
+<li><em>Whitelist</em> the IP address of the host where the <code>HTTP POST</code> request originates from</li>
+</ol>
+<h3 id="use-cases-for-automated-defence"><a name="user-content-use-cases-for-automated-defence" href="#use-cases-for-automated-defence" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Use Cases for Automated Defence</h3>
+<ol>
+<li>Automated Defender (Attack Alerts + Automated Firewall)</li>
+<li>Security Analytics + Reports</li>
+<li>Near real-time Centralised Log Monitoring</li>
+</ol>
+<h3 id="attack-scenario-wordpress-xml-rpc"><a name="user-content-attack-scenario-wordpress-xml-rpc" href="#attack-scenario-wordpress-xml-rpc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Attack Scenario : Wordpress XML-RPC</h3>
+<p><img alt="Wordpress XML-RPC attack blog" src="images/modsec-dashboard-xmlrpc-attacks.png" /></p>
+<p><small><a href="https://blog.appsecco.com/analysing-attacks-on-a-wordpress-xml-rpc-using-an-elk-stack-3bf25a7e36cc/"><a href="https://blog.appsecco.com/analysing-attacks-on-a-wordpress-xml-rpc-using-an-elk-stack-3bf25a7e36cc"><a href="https://blog.appsecco.com/analysing-attacks-on-a-wordpress-xml-rpc-using-an-elk-stack-3bf25a7e36cc">https://blog.appsecco.com/analysing-attacks-on-a-wordpress-xml-rpc-using-an-elk-stack-3bf25a7e36cc</a></a></a></small></p>
+<h3 id="needs-improvement"><a name="user-content-needs-improvement" href="#needs-improvement" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Needs Improvement</h3>
+<ul>
+<li>More attack signatures required </li>
+<li>For example <a href="http://documentation.wazuh.com/en/latest/ossec_ruleset.html">OSSEC Wazuh Ruleset</a></li>
+<li>Improve the ElastAlert Alerter custom code</li>
+<li>Any suggestions from your side?</li>
+</ul>
+<h3 id="pentesting-elastic-stack"><a name="user-content-pentesting-elastic-stack" href="#pentesting-elastic-stack" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pentesting Elastic Stack</h3>
+<p><a href="/home/madhuakula/appsecco/devseccon-asia-2017/aismd/Docs/pentest-report.md">Elastic stack Pentesting Report</a></p>
+<h3 id="alternatives-and-best-practices"><a name="user-content-alternatives-and-best-practices" href="#alternatives-and-best-practices" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Alternatives and Best practices</h3>
+<p><a href="/home/madhuakula/appsecco/devseccon-asia-2017/aismd/Docs/alternatives-best-practices.md">Alternatives &amp; Best practices</a></p>
+<p><img alt="DevSecCon" src="images/devseccon-footer.png" /></p></article></body></html>

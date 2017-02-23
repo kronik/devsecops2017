@@ -1,0 +1,9 @@
+cluster.name: ninja-infra-mon
+
+node.name: node-1
+
+bootstrap.memory_lock: true
+
+network.host: 127.0.0.1
+
+path.repo: "/var/backups/elasticsearch"

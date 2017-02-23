@@ -1,0 +1,28 @@
+es_host: localhost
+es_port: 9200
+name: "web 404 error log alert"
+type: frequency
+index: infra-*
+num_events: 20
+timeframe:
+  hours: 24
+
+# For more info: http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html
+
+filter:
+- query:
+    query_string:
+      query: "_type: weblog AND 404"
+
+alert:
+  - slack
+  - email
+
+slack:
+slack_webhook_url: "https://hooks.slack.com/services/xxxxx"
+
+email:
+  - "root"
+
+realert:
+  minutes: 0

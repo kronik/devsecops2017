@@ -1,0 +1,2 @@
+a1ea8eb67886dae8cca6549a7a49646e  linux-nikto-2.1.6.zip
+e97220d16595d1c41a787cc2850b9c08  windows-nikto-2.1.5.zip
